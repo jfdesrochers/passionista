@@ -28,14 +28,14 @@ export const Logo = DivImage.extend`
 Logo.displayName = 'Logo'
 
 export const Tagline = DivImage.extend`
-    width: 151.5px;
+    width: 126.5px;
     height: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     background-image: ${props => props.dark ? `url(${taglinedark})` : `url(${tagline})`};
     ${media.tabletPortrait`
-        width: 303px;
+        width: 253px;
         height: 32px;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -129,6 +129,11 @@ const MenuLink = styled(Link)`
 `
 MenuLink.displayName = 'MenuLink'
 
+const FooterWrapper = styled.div`
+    z-index: 20;
+`
+FooterWrapper.displayName = 'FooterWrapper'
+
 export class Header extends Component {
     constructor(props) {
         super(props)
@@ -176,4 +181,12 @@ Header.propTypes = {
     onCloseButtonClick: PropTypes.func,
     dark: PropTypes.bool,
     autoDark: PropTypes.bool
+}
+
+export const Footer = (props) => {
+    return (
+        <FooterWrapper>
+            <Tagline {...props} />
+        </FooterWrapper>
+    )
 }

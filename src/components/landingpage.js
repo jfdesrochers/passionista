@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {Wrapper} from './elements'
-import {Header} from './headerfooter';
+import {Header, Footer} from './headerfooter';
 
 export default class LandingPage extends Component {
     render() {
@@ -13,6 +13,8 @@ export default class LandingPage extends Component {
                     o['Nos Services'][i] = this.props.storeData[i].title
                     return o
                 }, {'Nos Services': {}})} />
+                <div></div>
+                <Footer></Footer>
             </Wrapper>
         )
     }

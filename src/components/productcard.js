@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import media from '../styles/media';
 
 import {Wrapper, Hr, Button, Picture} from './elements'
-import {Header} from './headerfooter';
+import {Header, Footer} from './headerfooter';
 
 const CardContainer= styled.div`
     flex-grow: 1;
@@ -132,6 +132,7 @@ export default class ProductCard extends Component {
                         </CardActions>
                     </CardDescBox>
                 </CardContainer>
+                <Footer autoDark={this.props.productData.darkUI}></Footer>
             </Wrapper>
         )
     }

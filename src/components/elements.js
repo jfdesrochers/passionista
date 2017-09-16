@@ -5,13 +5,13 @@ import media from '../styles/media';
 
 export const Wrapper = styled.div`
     display: flex;
+    position: relative;
     flex-direction: column;
     min-height: 100%;
-    height: 100%;
     justify-content: space-between;
     ${media.tabletPortrait`
-        margin-left: 40px;
-        margin-right: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     `}
 `
 Wrapper.displayName = 'Wrapper'
