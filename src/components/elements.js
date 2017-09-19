@@ -247,6 +247,8 @@ class PictureComponent extends Component {
             this.img = new Image()
             this.img.onload = () => {
                 this.setState({loaded: true})
+                this.img.onload = null
+                this.img = null
             }
             this.img.src = this.props.pictureUrl
         }
